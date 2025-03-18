@@ -10,7 +10,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "back_end_notes/wsgi.py",
+      "dest": "back_end_notes.urls/wsgi.py",
       "headers": {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Methods": "GET, POST, OPTIONS, DELETE, PUT"
@@ -18,7 +18,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "back_end_notes/wsgi.py"
+      "dest": "back_end_notes.urls/wsgi.py"
     }
   ]
 }
