@@ -19,10 +19,10 @@ from django.http import HttpResponse
 from django.urls import path, include
 
 def home(request):
-    return HttpResponse("Home Page")
+    return HttpResponse("Hello World")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('',home),
-    # path('notes/', include('notes.urls'))
+    # path('notes/', include('back_end_notes.urls'))
 ]

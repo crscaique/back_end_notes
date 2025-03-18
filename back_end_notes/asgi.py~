@@ -15,3 +15,4 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'back_end_notes.settings')
 
 application = get_asgi_application()
 
+app = application
