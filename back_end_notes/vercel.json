@@ -1,21 +1,15 @@
 {
   "framework": null,
-  "build": {
-    "env": {
-      "DJANGO_SETTINGS_MODULE": "back_end_notes.settings"
+  "builds": [
+    {
+      "src": "back_end_notes/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize":  "15mb", "runtime":  "python3.9" }
     }
-  },
+  ],
   "routes": [
     {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "/media/(.*)",
-      "dest": "/media/$1"
-    },
-    {
-      "src": "/api/(.*)",
+      "src": "/(.*)",
       "dest": "back_end_notes/wsgi.py",
       "headers": {
         "Access-Control-Allow-Origin": "*",
