@@ -3,7 +3,8 @@
   "build": {
     "env": {
       "DJANGO_SETTINGS_MODULE": "back_end_notes.settings"
-    }
+    },
+    "use": "@vercel/python"
   },
   "routes": [
     {
