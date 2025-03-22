@@ -1,0 +1,30 @@
+{
+  "framework": null,
+  "build": {
+    "env": {
+      "DJANGO_SETTINGS_MODULE": "back_end_notes.settings"
+    }
+  },
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/media/(.*)",
+      "dest": "/media/$1"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "back_end_notes/wsgi.py",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS, DELETE, PUT"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "back_end_notes/wsgi.py"
+    }
+  ]
+}
