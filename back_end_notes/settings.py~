@@ -37,7 +37,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-ALLOWED_HOSTS = ["back-end-notes-ywb3.vercel.app", "127.0.0.1"]
+ALLOWED_HOSTS = ["back-end-notes-ywb3.vercel.app", "127.0.0.1", "back-end-notes-ywb3-git-master-crscaiques-projects.vercel.app","localhost"]
 
 # Application definition
 
