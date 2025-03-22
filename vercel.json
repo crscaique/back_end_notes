@@ -1,15 +1,22 @@
 {
-  "framework": null,
+  "version": 2,
   "builds": [
     {
       "src": "back_end_notes/wsgi.py",
-      "use": "@vercel/python",
-      "config": { "maxLambdaSize":  "15mb", "runtime":  "python3.9" }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/media/(.*)",
+      "dest": "/media/$1"
+    },
+    {
+      "src": "/api/(.*)",
       "dest": "back_end_notes/wsgi.py",
       "headers": {
         "Access-Control-Allow-Origin": "*",
